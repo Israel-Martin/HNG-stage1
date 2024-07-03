@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Goals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1 data-testid="slackDisplayName">Israel-Martin</h1>
+    <img data-testid="slackProfilePicture" src="./Israel-Martin.jpg" alt="Slack Profile Picture" width="100" height="100">
+</header>
+
+<main>
+    <h2>Tech Goals for the Next 2 Years</h2>
+    <p>1. Master front-end development technologies including HTML, CSS, and JavaScript.</p>
+    <p>2. Learn ReactJS and build several projects to solidify my understanding.</p>
+    <p>3. Contribute to open-source projects to gain practical experience and give back to the community.</p>
+    <p>4. Obtain certifications in relevant technologies to enhance my credentials.</p>
+    <p>5. Network with other developers and participate in tech conferences and meetups.</p>
+    <p>6. Earn my 1st $500 doing freelance web development gigs.</p>
+</main>
+
+<footer>
+    <p data-testid="currentTimeUTC">Current Time in UTC: <span id="utc-time"></span></p>
+    <p data-testid="currentDay">Current Day: <span id="day-of-week"></span></p>
+    <p data-testid="slackEmail">Slack Email: israelmartineffiong@gmail.com</p>
+    <p>
+        <a href="https://hng.tech/learn" data-testid="hngLink">HNG Tech Learn</a> |
+        <a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a> |
+        <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a>
+    </p>
+</footer>
+
+<script>
+    // Display current UTC time
+    function updateUTCTime() {
+        const now = new Date();
+        document.getElementById('utc-time').textContent = now.toUTCString();
+    }
+    updateUTCTime();
+    setInterval(updateUTCTime, 1000);
+
+    // Display current day of the week
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    document.getElementById('day-of-week').textContent = days[new Date().getDay()];
+</script>
+
+</body>
+</html>
